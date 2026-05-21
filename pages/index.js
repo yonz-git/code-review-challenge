@@ -6,7 +6,7 @@ import React, { useState } from "react";
 
 import myComponent from "@/components/myComponent1/myComponent.js";
 
-const kosmetikProdukt = [
+const cosmeticProduct = [
   {
     name: "Luminous Silk Foundation",
     brand: "Aurora",
@@ -70,32 +70,32 @@ export default function HomePage({ setProduct, productToBuy }) {
 
   return (
     <>
-      {/* vv funktioniert nicht */}
-      <myComponent />
+     
+      <MyComponent />
       <h1>My Cosmetics Store</h1>
       <div>
-        {kosmetikProdukt &&
-          kosmetikProdukt.map((produkt, index) => (
+        {cosmeticProductt &&
+          cosmeticProduct.map((product, index) => (
             <StyledDiv key={index}>
-              <h1>Name: {produkt.name}</h1>
-              <h2>Brand: {produkt.brand}</h2>
-              <h3>Typ: {produkt.type}</h3>
-              <p>Farbe: {produkt.shade}</p>
+              <h1>Name: {product.name}</h1>
+              <h2>Brand: {product.brand}</h2>
+              <h3>Typ: {product.type}</h3>
+              <p>Farbe: {product.shade}</p>
               <p>
                 Vorteile:
-                {produkt.benefits.map((p, index) => (
-                  <>
+                {product.benefits.map((p, index) => (
+    
                     <span>{p}, </span>
-                  </>
+                
                 ))}
               </p>
               <p>
-                <b style={{ color: "white" }}>{produkt.price}</b>
+                <b style={{ color: "white" }}>{product.price}</b>
               </p>
-              <p>produkt.size</p>
+              <p>product size</p>
               <Btn
                 setProduct={setProduct}
-                produkt={produkt}
+                product={product}
                 productToBuy={productToBuy}
               />
             </StyledDiv>
