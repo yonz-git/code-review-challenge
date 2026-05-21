@@ -1,11 +1,10 @@
 import styled from "styled-components";
 
-export const Button = ({ setProduct, produkt, productToBuy }) => {
+export const Button = ({ setProduct, product }) => {
   return (
     <StyledButton
       onClick={() => {
-        setProduct(produkt);
-        console.log(productToBuy);
+        setProduct(product);
       }}
     >
       Buy
