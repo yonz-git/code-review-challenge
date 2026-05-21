@@ -1,3 +1,3 @@
 export default function Title() {
-  return <h1>Comestics Store</h1>;
+  return <h1>Cosmetics Store</h1>;
 }
